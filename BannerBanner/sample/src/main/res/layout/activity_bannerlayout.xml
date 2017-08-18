@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <comm.wk.yotalker.library.BannerLayout
+            android:id="@+id/banner1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            custom:autoPlayDuration="4000"
+            custom:indicatorMargin="10dp"
+            custom:indicatorPosition="rightBottom"
+            custom:indicatorShape="rect"
+            custom:indicatorSpace="3dp"
+            custom:isAutoPlay="true"
+            custom:scrollDuration="600"
+            custom:selectedIndicatorColor="@color/colorPrimary"
+            custom:selectedIndicatorHeight="6dp"
+            custom:selectedIndicatorWidth="6dp"
+            custom:unSelectedIndicatorColor="#99ffffff"
+            custom:unSelectedIndicatorHeight="6dp"
+            custom:unSelectedIndicatorWidth="6dp"></comm.wk.yotalker.library.BannerLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="低于三张图片" />
+
+        <comm.wk.yotalker.library.BannerLayout
+            android:id="@+id/banner2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            custom:autoPlayDuration="6000"
+            custom:indicatorMargin="10dp"
+            custom:indicatorPosition="centerBottom"
+            custom:indicatorShape="oval"
+            custom:indicatorSpace="3dp"
+            custom:isAutoPlay="true"
+            custom:scrollDuration="900"
+            custom:selectedIndicatorColor="@color/colorAccent"
+            custom:selectedIndicatorHeight="6dp"
+            custom:selectedIndicatorWidth="6dp"
+            custom:unSelectedIndicatorColor="#99ffffff"
+            custom:unSelectedIndicatorHeight="6dp"
+            custom:unSelectedIndicatorWidth="6dp">
+
+        </comm.wk.yotalker.library.BannerLayout>
+
+    </LinearLayout>
+
+</ScrollView>
