@@ -1,4 +1,4 @@
-package comm.wk.yotalker.library;
+package com.wk.banner;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -112,35 +112,35 @@ public class BannerLayout extends RelativeLayout {
     private void init(AttributeSet attrs, int defStyleAttr) {
 
         //将在xml中定义的属性值映射到自定义属性中，里面包含了自定义的属性和值
-        TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.BannerLayout, defStyleAttr, 0);
+        TypedArray typedArray = getContext().obtainStyledAttributes(attrs, comm.wk.yotalker.library.R.styleable.BannerLayout, defStyleAttr, 0);
 
         //从TypedArray中获取自定义属性值 通过键值对存储
         //通过下划线连接 形成属性名
         selectedIndicatorColor = typedArray
-                .getColor(R.styleable.BannerLayout_selectedIndicatorColor, selectedIndicatorColor);
+                .getColor(comm.wk.yotalker.library.R.styleable.BannerLayout_selectedIndicatorColor, selectedIndicatorColor);
         unSelectedIndicatorColor = typedArray
-                .getColor(R.styleable.BannerLayout_unSelectedIndicatorColor, unSelectedIndicatorColor);
+                .getColor(comm.wk.yotalker.library.R.styleable.BannerLayout_unSelectedIndicatorColor, unSelectedIndicatorColor);
         selectedIndicatorHeight = (int) typedArray
-                .getDimension(R.styleable.BannerLayout_selectedIndicatorHeight, selectedIndicatorHeight);
+                .getDimension(comm.wk.yotalker.library.R.styleable.BannerLayout_selectedIndicatorHeight, selectedIndicatorHeight);
         unSelectedIndicatorHeight = (int) typedArray
-                .getDimension(R.styleable.BannerLayout_unSelectedIndicatorHeight, unSelectedIndicatorHeight);
+                .getDimension(comm.wk.yotalker.library.R.styleable.BannerLayout_unSelectedIndicatorHeight, unSelectedIndicatorHeight);
         selectedIndicatorWidth = (int) typedArray
-                .getDimension(R.styleable.BannerLayout_selectedIndicatorWidth, selectedIndicatorWidth);
+                .getDimension(comm.wk.yotalker.library.R.styleable.BannerLayout_selectedIndicatorWidth, selectedIndicatorWidth);
         unselectedIndicatorWidth = (int) typedArray
-                .getDimension(R.styleable.BannerLayout_unSelectedIndicatorWidth, unselectedIndicatorWidth);
+                .getDimension(comm.wk.yotalker.library.R.styleable.BannerLayout_unSelectedIndicatorWidth, unselectedIndicatorWidth);
         indicatorMargin = (int) typedArray
-                .getDimension(R.styleable.BannerLayout_indicatorMargin, indicatorMargin);
+                .getDimension(comm.wk.yotalker.library.R.styleable.BannerLayout_indicatorMargin, indicatorMargin);
         indicatorSpace = (int) typedArray.
-                getDimension(R.styleable.BannerLayout_indicatorSpace, indicatorSpace);
+                getDimension(comm.wk.yotalker.library.R.styleable.BannerLayout_indicatorSpace, indicatorSpace);
         autoPlayDuration = typedArray
-                .getInt(R.styleable.BannerLayout_autoPlayDuration, autoPlayDuration);
+                .getInt(comm.wk.yotalker.library.R.styleable.BannerLayout_autoPlayDuration, autoPlayDuration);
         scrollDuration = typedArray
-                .getInt(R.styleable.BannerLayout_scrollDuration, scrollDuration);
+                .getInt(comm.wk.yotalker.library.R.styleable.BannerLayout_scrollDuration, scrollDuration);
         isAutoPlay = typedArray
-                .getBoolean(R.styleable.BannerLayout_isAutoPlay, isAutoPlay);
+                .getBoolean(comm.wk.yotalker.library.R.styleable.BannerLayout_isAutoPlay, isAutoPlay);
 
         //
-        int shape = typedArray.getInt(R.styleable.BannerLayout_indicatorShape, Shape.oval.ordinal());
+        int shape = typedArray.getInt(comm.wk.yotalker.library.R.styleable.BannerLayout_indicatorShape, Shape.oval.ordinal());
         for (Shape shape1 : Shape.values()) {
             if (shape1.ordinal() == shape) {
                 indicatorShape = shape1;
@@ -149,7 +149,7 @@ public class BannerLayout extends RelativeLayout {
 
         }
 
-        int position = typedArray.getInt(R.styleable.BannerLayout_indicatorPosition, Position.centerBottom.ordinal());
+        int position = typedArray.getInt(comm.wk.yotalker.library.R.styleable.BannerLayout_indicatorPosition, Position.centerBottom.ordinal());
         for (Position position1 : Position.values()) {
             if (position1.ordinal() == position) {
                 indicatorPosition = position1;

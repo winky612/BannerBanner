@@ -14,7 +14,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import comm.wk.yotalker.library.BannerLayout;
+import com.wk.banner.BannerLayout;
 
 /**
  * Created by wk on 2017/8/18.

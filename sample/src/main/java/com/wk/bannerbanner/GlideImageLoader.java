@@ -5,7 +5,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 
-import comm.wk.yotalker.library.BannerLayout;
+import com.wk.banner.BannerLayout;
 
 /**
  * Created by wk on 2017/8/18.
