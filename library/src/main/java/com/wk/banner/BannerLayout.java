@@ -95,11 +95,11 @@ public class BannerLayout extends RelativeLayout {
 
 
     public BannerLayout(Context context) {
-        super(context);
+        this(context,null,0);//注意！！此处填this() 调3个参数的构造方法
     }
 
     public BannerLayout(Context context, AttributeSet attrs) {
-        super(context, attrs);
+        this(context, attrs,0);
     }
 
     public BannerLayout(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -232,7 +232,7 @@ public class BannerLayout extends RelativeLayout {
     }
 
 
-//    @NonNull   //@NonNull————指明一个参数，字段或者方法的返回值不可以为null
+    //@NonNull————指明一个参数，字段或者方法的返回值不可以为null
 
     //将url----->转化成view
     private View getImageView(String url, final int position) {

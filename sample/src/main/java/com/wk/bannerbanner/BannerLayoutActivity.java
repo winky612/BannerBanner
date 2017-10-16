@@ -48,6 +48,8 @@ public class BannerLayoutActivity extends AppCompatActivity {
         });
 
 
+
+
         banner1.setOnViewItemClickListener(new BannerLayout.OnViewItemClickListener() {
             @Override
             public void onItemClick(int position) {
