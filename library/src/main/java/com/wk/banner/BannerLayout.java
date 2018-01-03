@@ -7,7 +7,6 @@ import android.graphics.drawable.GradientDrawable;
 import android.graphics.drawable.LayerDrawable;
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
@@ -27,7 +26,8 @@ import java.util.List;
 
 /**
  * Created by wk on 2017/8/16.
- * 自定义控件步骤：1-在values中新建attr.xml，并定义属性值
+ * 自定义控件步骤：
+ * 1-在values中新建attr.xml，并定义属性值
  * 2-定义控件&属性
  * 3-在构造方法中获取自定义属性（通过TypedArray），并把属性值赋给控件(控件别忘了初始化)
  * 4-将控件添加到viewGroup中（LayoutParams  将单个指示器---->添加到LeanerLayout容器&将指示器容器---->加到BannerLayou）
@@ -94,6 +94,8 @@ public class BannerLayout extends RelativeLayout {
     }
 
 
+    //我们重写了3个构造方法，默认的布局文件调用的是两个参数的构造方法，
+    // 所以记得让所有的构造调用我们的三个参数的构造，我们在三个参数的构造中获得自定义属性。
     public BannerLayout(Context context) {
         this(context,null,0);//注意！！此处填this() 调3个参数的构造方法
     }
